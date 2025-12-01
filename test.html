@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini API Test</title>
+</head>
+<body>
+
+<h1>Open Console (F12) to See Result</h1>
+
+<script>
+const apiKey = "AIzaSyDsculXLq8bFf0orBIdUgRTdA_bAxuco-g"; // Your API Key
+
+fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "X-goog-api-key": apiKey
+    },
+    body: JSON.stringify({
+        contents: [
+            {
+                parts: [
+                    { text: "Explain how AI works in a few words" }
+                ]
+            }
+        ]
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data)) // Console output
+.catch(error => console.error(error));
+</script>
+
+</body>
+</html>

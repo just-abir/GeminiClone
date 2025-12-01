@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* ============================
+   🔥 SHIMMER LOADER ANIMATION
+============================ */
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.loader-line {
+  @apply rounded w-full;            /* Tailwind utilities */
+  height: 12px;                      /* bar height */
+  background-image: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+@media screen and (max-width: 600px)
+{
+
+
+.Intro{
+  background-color:;
+  
+}
+.box{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box1{
+
+  display: none;
+}
+.box1:first-child, .box1:nth-child(2) {
+    display: flex; /* অথবা flex */
+    width: 100%;
+     justify-content: center;
+  align-items: center;    /* পুরো স্ক্রিন জুড়ে থাকবে */
+  }
+.father{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  padding-left: 38px;
+
+}
+.gemLogo{
+
+  
+  height: 20px;
+margin-left: 0px;
+
+
+  
+}
+
+.heroText{
+  font-size: small;
+  padding-left: 20px
+}
+
+.mainSide{
+  background-color:;
+  padding: 5px;
+  width: 40px;
+  position: ;
+  display: no;
+}
+
+.last{
+  padding-left: ;
+}
+
+.menu{
+  pointer-events: none; /* কোনো ক্লিক কাজ করবে না */
+  opacity: 0;
+}
+
+.search,.dashboard{
+  padding: 5px;
+}
+
+.footer{
+  padding-left: 30px;
+}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+.box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+
+ 
+
+}
