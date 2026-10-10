@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+  overflow-x: hidden;
+}
 
 /* Hide scrollbar but allow scrolling */
 .scrollbar-hide::-webkit-scrollbar {
@@ -35,95 +42,10 @@ html {
 }
 
 .loader-line {
-  @apply rounded w-full;            /* Tailwind utilities */
-  height: 12px;                      /* bar height */
-  background-image: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+  border-radius: 9999px;
+  width: 100%;
+  height: 14px;
+  background-image: linear-gradient(to right, #e2e8f0, #f8fafc, #e2e8f0);
   background-size: 200% 100%;
-  animation: shimmer 1.5s linear infinite;
-}
-
-@media screen and (max-width: 600px)
-{
-
-
-.Intro{
-  background-color:;
-  
-}
-.box{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.box1{
-
-  display: none;
-}
-.box1:first-child, .box1:nth-child(2) {
-    display: flex; /* অথবা flex */
-    width: 100%;
-     justify-content: center;
-  align-items: center;    /* পুরো স্ক্রিন জুড়ে থাকবে */
-  }
-.father{
-  display: flex;
-  flex-direction: column;
-  margin-left: 0px;
-  padding-left: 38px;
-
-}
-.gemLogo{
-
-  
-  height: 20px;
-margin-left: 0px;
-
-
-  
-}
-
-.heroText{
-  font-size: small;
-  padding-left: 20px
-}
-
-.mainSide{
-  background-color:;
-  padding: 5px;
-  width: 40px;
-  position: ;
-  display: no;
-}
-
-.last{
-  padding-left: ;
-}
-
-.menu{
-  pointer-events: none; /* কোনো ক্লিক কাজ করবে না */
-  opacity: 0;
-}
-
-.search,.dashboard{
-  padding: 5px;
-}
-
-.footer{
-  padding-left: 30px;
-}
-
-}
-
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-
-.box{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-}
-
-
- 
-
+  animation: shimmer 1.5s ease-in-out infinite;
 }
